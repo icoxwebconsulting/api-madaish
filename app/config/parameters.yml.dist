@@ -1,0 +1,31 @@
+# This file is a "template" of what your parameters.yml file should look like
+# Set parameters here that may be different on each deployment target of the app, e.g. development, staging, production.
+# http://symfony.com/doc/current/best_practices/configuration.html#infrastructure-related-configuration
+parameters:
+    database_host:     127.0.0.1
+    database_port:     ~
+    database_name:     madaish
+    database_user:     root
+    database_password: root
+    # You should uncomment this if you want use pdo_sqlite
+    # database_path: "%kernel.root_dir%/data.db3"
+
+    mailer_transport:  smtp
+    mailer_host:       127.0.0.1
+    mailer_user:       ~
+    mailer_password:   ~
+
+    # A secret key that's used to generate certain security-related tokens
+    secret:            ThisTokenIsNotSoSecretChangeIt
+
+    api_url: 'http://testmadaishapi.azurewebsites.net/api/'
+
+    # push notifications
+    gcm_token: AIzaSyDp-4uIZ7DvKSmc7u9noD5HDL5II2xgmwI
+    gcm_package_name: 'com.madaish.app'
+    apn_app_id: com.madaish.app
+    apn_pem_path: app/config/push-certificate.pem
+    apn_sandbox: 0
+    apn_pass_phrase: madaish
+    ionic_token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIwMTIxNmMxZi01OGQxLTRlOGEtYmQ0Yy0wMjBhYTFkZTEwMmEifQ.WQaB6ExDn8C3Xgoa5pXn6urScOPstcTxShOf1zYN3nA
+    ionic_profile: dev

@@ -1,0 +1,256 @@
+<?php
+
+namespace AppBundle\Entity;
+
+use CoolwayFestivales\SafetyBundle\Entity\Device;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Notification
+ *
+ * @ORM\Table(name="notifications")
+ * @ORM\Entity
+ */
+class Notification
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="token", type="string", length=500)
+     */
+    private $token;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="os", type="integer")
+     */
+    private $os;
+
+    /**
+     * @ORM\Column(name="notification_id", type="string", nullable=true)
+     */
+    private $notificationId;
+
+
+    /**
+     * @ORM\Column(name="title", type="string", nullable=true)
+     */
+    private $title;
+
+    /**
+     * @ORM\Column(name="text", type="text", nullable=true)
+     */
+    private $text;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="send", type="boolean", nullable=true)
+     */
+    private $send;
+
+    /**
+     * @ORM\Column(name="type_id", type="integer", nullable=true)
+     */
+    private $typeId;
+
+    /**
+     * @ORM\Column(name="user_name", type="text", nullable=true)
+     */
+    private $userName;
+
+    /**
+     * @ORM\Column(name="post_name", type="text", nullable=true)
+     */
+    private $postName;
+
+
+    /**
+     * @ORM\Column(name="post_type", type="text", nullable=true)
+     */
+    private $postType;
+    
+
+    /**
+     * Get id
+     *
+     * @return integer
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set token
+     *
+     * @param string $token
+     * @return Notification
+     */
+    public function setToken($token)
+    {
+        $this->token = $token;
+
+        return $this;
+    }
+
+    /**
+     * Get token
+     *
+     * @return string
+     */
+    public function getToken()
+    {
+        return $this->token;
+    }
+
+    /**
+     * Set notificationId
+     *
+     * @param integer $notificationId
+     * @return Notification
+     */
+    public function setNotificationId($notificationId)
+    {
+        $this->notificationId = $notificationId;
+
+        return $this;
+    }
+
+    /**
+     * Get notificationId
+     *
+     * @return integer
+     */
+    public function getNotificationId()
+    {
+        return $this->notificationId;
+    }
+
+
+    /**
+     * Set text
+     *
+     * @param string $text
+     * @return Notification
+     */
+    public function setText($text)
+    {
+        $this->text = $text;
+
+        return $this;
+    }
+
+    /**
+     * Get text
+     *
+     * @return string
+     */
+    public function getText()
+    {
+        return $this->text;
+    }
+
+    /**
+     * Set title
+     *
+     * @param string $title
+     * @return Notification
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    /**
+     * Get title
+     *
+     * @return string 
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * Set typeId
+     *
+     * @param integer $typeId
+     * @return Notification
+     */
+    public function setTypeId($typeId)
+    {
+        $this->typeId = $typeId;
+
+        return $this;
+    }
+
+    /**
+     * Get typeId
+     *
+     * @return integer 
+     */
+    public function getTypeId()
+    {
+        return $this->typeId;
+    }
+
+    /**
+     * Set os
+     *
+     * @param integer $os
+     * @return Notification
+     */
+    public function setOs($os)
+    {
+        $this->os = $os;
+
+        return $this;
+    }
+
+    /**
+     * Get os
+     *
+     * @return integer 
+     */
+    public function getOs()
+    {
+        return $this->os;
+    }
+
+    /**
+     * Set send
+     *
+     * @param boolean $send
+     *
+     * @return Notification
+     */
+    public function setSend($send)
+    {
+        $this->send = $send;
+
+        return $this;
+    }
+
+    /**
+     * Get send
+     *
+     * @return boolean
+     */
+    public function getSend()
+    {
+        return $this->send;
+    }
+}
