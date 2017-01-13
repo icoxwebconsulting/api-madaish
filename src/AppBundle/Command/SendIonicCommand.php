@@ -61,8 +61,8 @@ class SendIonicCommand extends ContainerAwareCommand
 
                 if(isset($stats['status']))
                 {
-//                    $notification->setSend(true);
-//                    $em->persist($notification);
+                    $notification->setSend(true);
+                    $em->persist($notification);
                     $cont++;
 
                 }
